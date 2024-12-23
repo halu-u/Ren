@@ -39,14 +39,6 @@ section {
     margin: 1em 0;
 }
 
-.project {
-    background-color: white;
-    padding: 1em;
-    margin: 1em 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 footer {
     background-color: #333;
     color: white;
@@ -108,4 +100,12 @@ footer {
 
 .blog-post p {
     margin: 0.5em 0;
+}
+
+.project {
+    background-color: white;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
