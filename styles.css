@@ -2,55 +2,48 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-header {
-    background-color: #333;
+    background-color: black;
     color: white;
-    padding: 1em 0;
-    text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
+header, section, footer {
+    background-color: black;
     color: white;
+}
+
+a {
+    color: #5AFF19;
     text-decoration: none;
-}
-
-section {
-    padding: 2em;
-    margin: 1em 0;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 2em;
-    position: relative;
 }
 
 #typingHeader {
     font-size: 2em;
     font-family: 'Courier New', Courier, monospace;
+    color: #5AFF19;
+}
+
+#blog, #about, #projects {
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post, .project {
+    background-color: #333;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3, .blog-post p, .project h3, .project p {
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -58,54 +51,13 @@ footer {
         padding: 0.5em 0;
     }
     nav ul li {
-        display: block; margin: 5px 0;
-    } 
-    section { padding: 1em;
+        display: block; 
+        margin: 5px 0;
+    }
+    section { 
+        padding: 1em;
     }
     #typingHeader {
         font-size: 1.5em;
     }
-}
-
-#archive-link {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-}
-
-#latest-posts .blog-post {
-    
-}
-
-#blog {
-    padding: 1em;
-    margin: 1em 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* background-color: #f9f9f9; */
-}
-
-.blog-post {
-    margin-bottom: 2em;
-    padding: 1em;
-    /* background-color: white; */
-    /* border: 1px solid #ddd; */
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h3 {
-    margin-top: 0;
-}
-
-.blog-post p {
-    margin: 0.5em 0;
-}
-
-.project {
-    background-color: white;
-    padding: 1em;
-    margin: 1em 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
