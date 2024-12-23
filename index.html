@@ -179,15 +179,33 @@
         }
 
         type();
-        
-        fetch('blog/my-first-blog-post.html')
-            .then(response => response.text())
-            .then(data => {
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = data;
-                const blogContent = tempDiv.querySelector('#blog-content').textContent;
-                document.getElementById('preview-content').textContent = blogContent.substring(0, 30) + '...'; }
-            );
+        const posts = [
+            { url: 'blog/my-first-blog-post.html', title: 'My First Blog Post', date: 'December 20, 2024' },
+            { url: 'blog/exploring-os-development.html', title: 'Exploring OS Development', date: 'December 18, 2024' }
+            // 他のブログ記事をここに追加
+            ];
+        posts.forEach(post => {
+            fetch(post.url)
+                .then(response => response.text())
+                .then(data => {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = data;
+                    const blogContent = tempDiv.querySelector('#blog-content').textContent;
+                    const previewContent = blogContent.substring(0, 30) + '...';
+                    
+                    const postHTML = `
+                        <div class="latest-post">
+                            <article class="blog-post">
+                                <h3>${post.title}</h3>
+                                <p>Posted on ${post.date}</p>
+                                <p>${previewContent}</p>
+                                <a href="${post.url}">Read more...</a>
+                            </article>
+                        </div>
+                    `;
+                    document.getElementById('latest-posts').insertAdjacentHTML('beforeend', postHTML);
+                });
+        }); 
     });
     </script>
 </body>
