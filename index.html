@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why do you come here...?</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+        }
+
+        header, section, footer {
+            background-color: black;
+            color: white;
+        }
+
+        a {
+            color: #5AFF19;
+            text-decoration: none;
+        }
+
+        #typingHeader {
+            font-size: 2em;
+            font-family: 'Courier New', Courier, monospace;
+            color: #5AFF19;
+        }
+
+        #blog, #about, #projects {
+            padding: 2em;
+            margin: 1em 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post, .project {
+            background-color: #333;
+            padding: 1em;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h3, .blog-post p, .project h3, .project p {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.5em 0;
+            }
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            } 
+            section {
+                padding: 1em;
+            } 
+            #typingHeader {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
