@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why do you come here...?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+        header, section, footer {
+            background-color: black;
+            color: white;
+        }
+        a {
+            color: #5AFF19;
+        }
+        #typingHeader {
+            color: #5AFF19;
+        }
+
+        #about {
+            background-color: black;
+        }
+
+        #about h2,
+        #about p {
+            background-color: black;
+            color: white;
+        }
+
+        #blog {
+            background-color: black;
+            color: white;
+        }
+
+        .blog-post {
+            background-color: #333;
+            padding: 1em;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+        
+        .blog-post h3,
+        .blog-post p {
+            color: white;
+        }
+
+        .blog-post a {
+            color: #5AFF19;
+        }
+
+        #projects {
+            background-color: black;
+            color: white;
+        }
+
+        .project {
+            background-color: #333;
+            padding: 1em;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+        .project h3,
+        .project p {
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="typingHeader"></h1>
+        <nav>
+            <ul>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="blog">
+        <h2>Blog</h2>
+        <article class="blog-post">
+            <h3>My First Blog Post</h3>
+            <p>Posted on December 20, 2024</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula dolor nec magna suscipit, vitae volutpat lectus feugiat.</p>
+            <a href="blog/my-first-blog-post.html">Read more...</a>
+        </article>
+        <article class="blog-post">
+            <h3>Exploring OS Development</h3>
+            <p>Posted on December 18, 2024</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula dolor nec magna suscipit, vitae volutpat lectus feugiat.</p>
+            <a href="blog/exploring-os-development.html">Read more...</a>
+        </article>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Electronics</h3>
+            <p>Offline task processing with voice recognition.<br>
+                (mainly data management by using SQLite3 and QR Codes)</p>
+        </div>
+        <div class="project">
+            <h3>Modeling with Blender</h3>
+            <p>I would like to create a world in VRChat about the death of people and things that are invisible in everyday life.<br>
+                but it's going to be a long road as I can't make animations and textures right yet.
+            </p>
+        </div>
+        <div class="project">
+            <h3>OS Development</h3>
+            <p>This is just a hobby for me.<br>
+                Right now, it only runs on QEMU, and since it is a 32-bit architecture, it is not practical, and that is where I would like to improve.<br>
+                Even if I understood, it probably feel a sense of emptiness, wondering what I had learned the hard way...
+            </p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p> Hi, I'm Ren. I love creating, learning about anything.<br>
+            In my free time, I enjoy OS development, malware analysis, and 3D modeling with Blender.<br><br>
+            Discord: 0x5a4d.<br>
+            (REMEMBER DOT IS REQUIRED.)<br><br>
+            I don't speak English well.<br>
+            (But I use an US keyboard. Because I don't have to use different KANJI, KATAKANA, and HIRAGANA.)
+        </p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions, feel free to email me at nakajima.ctf@gmail.com<br>
+        or visit my <a href="https://x.com/stem_cyb/">X profile</a>.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Ren. All rights reserved.</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Typing animation
+        const typedText = document.getElementById('typingHeader');
+        const text = "I wonder what the title should be...";
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typedText.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        type();
+    });
+    </script>
+</body>
+</html>
