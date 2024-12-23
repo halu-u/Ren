@@ -110,7 +110,7 @@
             <article class="blog-post">
                 <h3>My First Blog Post</h3>
                 <p>Posted on December 20, 2024</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula dolor nec magna suscipit, vitae volutpat lectus feugiat.</p>
+                <p id="preview-content"></p>
                 <a href="blog/my-first-blog-post.html">Read more...</a>
             </article>
         </div>
@@ -179,6 +179,15 @@
         }
 
         type();
+        
+        fetch('blog/my-first-blog-post.html')
+            .then(response => response.text())
+            .then(data => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data;
+                const blogContent = tempDiv.querySelector('#blog-content').textContent;
+                document.getElementById('preview-content').textContent = blogContent.substring(0, 30) + '...'; }
+            );
     });
     </script>
 </body>
