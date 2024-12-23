@@ -75,7 +75,16 @@ footer {
     }
 }
 
-/* Blog Section */
+#archive-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#latest-posts .blog-post {
+    
+}
+
 #blog {
     padding: 2em;
     margin: 1em 0;
