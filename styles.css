@@ -58,6 +58,14 @@ nav ul li a {
     color: #5AFF19;
 }
 
+#archive-link {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: max-content;
+    padding: 1em 0;
+}
+
 #blog, #about, #projects {
     padding: 2em;
     margin: 1em 0;
